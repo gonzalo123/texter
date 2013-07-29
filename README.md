@@ -19,7 +19,9 @@ describe("add mull returns zero", function () use ($stringCalculator) {
         assertEquals(null, $stringCalculator->add(""));
     });
 
-describe("add number returns number", function ($expected, $actual, $message) use ($stringCalculator) {
+describe(
+    "add number returns number",
+    function ($expected, $actual, $message) use ($stringCalculator) {
         assertEquals($expected, $stringCalculator->add($actual), $message);
     }, [
         ['expected' => 1, 'actual' => "1", 'message' => 'add 1'],
@@ -58,7 +60,7 @@ class Temperature
 $service = m::mock('service');
 
 describe("testing mocks with mockery", function() use ($service) {
-        $service->shouldReceive('readTemp')->andReturn(12, 12, 12);
+        $service->shouldReceive('readTemp')->andReturn(11, 12, 13);
         $temperature = new Temperature($service);
         assertEquals(12, $temperature->average(), "dummy message");
     });
