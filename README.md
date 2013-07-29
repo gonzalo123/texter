@@ -66,6 +66,12 @@ describe("testing mocks with mockery", function() use ($service) {
     });
 ```
 
+### How to run our tests
+
+```
+php ./bin/console.php texter:run ./tests
+```
+
 ### Warning
 
 That's a proof of concepts. It's not an stable library. There're a lot of remaining things.
