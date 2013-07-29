@@ -1,0 +1,25 @@
+{
+    "name": "gonzalo123/texter",
+    "description": "TDD framework",
+    "license":"MIT",
+    "keywords":["cli", "TDD", "Test"],
+    "authors": [
+        {
+            "name": "Gonzalo Ayuso",
+            "email": "gonzalo123@gmail.com"
+        }
+    ],
+    "require":{
+        "phpunit/phpunit": "3.7.22",
+        "symfony/console": "v2.3.2",
+        "symfony/finder": "v2.3.2",
+        "mockery/mockery" :"0.8.0"
+    },
+    "autoload": {
+        "psr-0": { "Texter": "lib" },
+        "files": ["lib/Texter/Functions.php", "vendor/phpunit/phpunit/PHPUnit/Framework/Assert/Functions.php"]
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
